@@ -1,49 +1,56 @@
-//include the library files and start main
+//including library
 #include <iostream>
 using namespace std;
-//Write a function that obtains from the user and returns a value for unitCst, units, and taxRt to the calling module. Choose an appropriate name for this function.
-
-void return3values(int &unitCst, int & units, int & taxRt)
+/*
+ Write a function that obtains from the user and returns a value for unitCost, units, and taxRate to the calling module. Choose an appropriate name for this function.
+ */
+void return3values(int &unitCost, int &units, int &taxRate)
 {
-    cout << "Enter unitCst";
-    cin >> unitCst;
+    cout << "Enter unitCost";
+    cin >> unitCost;
     cout << "Enter units";
     cin >> units;
-    cout << "Enter taxRt";
-    cin >> taxRt;
+    cout << "Enter taxRate”;
+    cin >> taxRate;
 }
 
-//Write a function that receives the unitCst, units, and taxRt and returns to the calling module the salesTx and totDue. Choose an appropriate name for this function.
+/*
+ Write a function that receives the unitCost, units, and taxRt and returns to the calling module the salesTax and totalDue. Choose an appropriate name for this function.
+ */
 
-
-void calculate(int unitCst, int units, int taxRt, int &salesTax, int &totDue)
+void calculate(int unitCost, int units, int taxRate, int & salesTax, int & totalDue)
 {
-    // that receives the unitCst, units, and taxRt
+    // that receives the unitCost, units, and taxRate
     // Code to calculate salesTax
-    salesTax = taxRt*(units*unitCst);
+    salesTax = taxRate*(units*unitCost);
     // Code to totDue
-    totDue = salesTax+(units*unitCst);
+    totalDue = salesTax+(units*unitCost);
     // returns to the calling module the salesTx and totDue.
     // this is done by reference
 }
- //Write a function that receives the unitCst, units, taxRt, salesTx, and totDue and outputs them in a very readable format. Choose an appropriate name for this function.
 
+/*
+ function that will receive the unitCost, units, taxRate, salesTax, and totalDue and outputs them . an appropriate name is chosen for this function.
+ */
 
-void outv(int unitCst, int units, int taxRt, int salesTx, int totDue)
+void printvalue(int unitCost, int units, int taxRt, int salesTx, int totDue)
 {
-    cout<<"\n"<<unitCst<<" "<<units<<" "<<taxRt<<" "<<salesTx<<" "<<totDue;
+    cout<<"\n"<<unitCost<<" "<<units<<" "<<taxRt<<" "<<salesTx<<" "<<totDue;
 }
 
-// Write a main function with variables called unitCost, unitsPurch, taxRate, salesTax, and totalDue. Your program should call the functions listed above.Pseudocode and Indentation must be present.
+/*
+ Write a main function with variables called unitCost, unitsPurchase, taxRate, salesTax, and totalDue. Your program should call the functions listed above.
+ Pseudocode and Indentation must be present.
+ */
 
 int main()
-{     int unitCst,units,taxRt;
-    // Ask for unitCst,units,taxrt
-    return3values(unitCst, units, taxRt);
-    // Unitcst
+{     int unitCost,units,taxrate;
+    // Ask for unitCost,units,taxrate
+    return3values(unitCost, units, taxRate);
+    // Unitcost
     int salesTax = 0, totDue = 0;
-    calculate(unitCst,units,taxRt,salesTax,totDue);
+    calculate(unitCost,units,taxRt,salesTax,totalDue);
     // all values are filled.
-    void outv(unitCst,units,taxRt,salesTax,totDue);
+    void printvalue(unitCost,units,taxRate,salesTax,totalDue);
     return 0;
 }
