@@ -1,9 +1,9 @@
 //include the libraries
 #include <iostream>
 using namespace std;
-//declaring and defining function for finding maximum
-int findmax(int a,int b)
-{    //check for max value and assign it to the return varible
+//declare and define the function for finding maximum number between the data
+int m(int a, int b)
+{    //check for max value and assign it to the return variable
     int max;
     if(a>b)
         max=a;
@@ -14,15 +14,15 @@ int findmax(int a,int b)
 }
 int main()
 {    int a,b,c;
-    // ask user for the values of the variables
-    cout<<"Enter any two values\n";
+    // user enters the values of the variables to be used in the function
+    cout<<“\nEnter the two values to be compared:\n”;
     cin>>a>>b;
-    //call the function and assign its return value to a varible
-    c=findmax(a,b);
+    //call the function and assign its return value to a variable
+    c=m(a,b);
     
     if(c==0)
-        cout<<"\n Both the entered numbers are equal";
-    else
-        cout<<"\nMaximum is "<<c<<endl;;
+        cout<<"\n the entered numbers are equal\n”;
+        else
+            cout<<"\n The maximum number between the two is: "<<c;
     return 0;
 }
