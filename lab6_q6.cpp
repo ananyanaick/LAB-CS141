@@ -1,92 +1,65 @@
-//include the libraries
 #include <iostream>
 using namespace std;
-//declaring and defining function for finding minimum
+//declare and define the function to find the maximum and minimum number 
 int findmin(int a,int b)
-{    //check for min value and assign it to the return varible
-    int min;
-    if(a<b)
-        min=a;
-    else if(b<a)
-        min=b;
-    // return the value to main
-    return min;
+{	//check for minimum value and assigning it to the return variable
+ 	int min;
+ 	if(a<b)
+ 		min=a;
+ 	else if(b<a)
+ 		min=b;
+ 	// returning the value to main function
+ 	return min;
 }
 int findmax(int a,int b)
-{    //check for max value and assign it to the return varible
-    int max;
-    if(a>b)
-        max=a;
-    else if(b>a)
-        max=b;
-    // return value to main
-    return max;
+{	//check for maximum value and assigning it to the return variable
+ 	int max;
+ 	if(a>b)
+ 		max=a;
+ 	else if(b>a)
+ 		max=b;
+ 	// returning the value to main function
+ 	return max;
 }
-
-int sumevennumbers(int n,int m)
-{//summing the even numbers
-    int s=0,i=n+1;
-    while(i<m)
-    {
-        if(i%2==0)
-            s+=i;
-        i++;
-    }
-    return s;
-}
-int sumoddnumbers(int n,int m)
-{//summing the odd numbers
-    int s=0,i=n+1;
-    while(i<m)
-    {
-        if(i%2==1)
-            s+=i;
-        i++;
-    }
-    return s;
-}
-int sumSquareOddNumbers(int n,int m)
-{//summing square of odd numbers between
-    int s=0,i=n+1;
-    while(i<m)
-    {
-        if(i%2==1)
-            s+=(i*i);
-        i++;
-    }
-    return s;
-}
-int sumSquareEvenNumbers(int n,int m)
-{//summing square of even numbers in between
-    int s=0,i=n+1;
-    while(i<m)
-    {
-        if(i%2==0)
-            s+=(i*i);
-        i++;
-    }
-    return s;
+void sum(int a,int b)
+{
+	//finding sum of given values
+ 	int s
+	s=a+b;
+ 	//printing them in the a+b=sum format
+ 	cout<<a<<"+"<<b<<"="<<s;
+ 	cout<<endl;
 }
 int main()
-{    //declaring necessary varibles to capture the return values
-    int sumeven,sumodd,sumSquareOdd,sumSquareEven;
-    int num1,num2,c,d;
-    // ask user for the values of the variables
-    cout<<"Enter any two values\n";
-    cin>>num1>>num2;
-    //call the function and assign its return value to a varible
-    c=findmin(num1,num2);
-    d=findmax(num1,num2);
-    num1=c;
-    num2=d;
-    //get values of the things done and print them
-    sumeven=sumevennumbers(num1,num2);
-    sumodd=sumoddnumbers(num1,num2);
-    sumSquareOdd=sumSquareOddNumbers(num1,num2);
-    sumSquareEven=sumSquareEvenNumbers(num1,num2);
-    cout<<"\n sum of even numbers between those numbers = "<<sumeven;
-    cout<<"\n sum of odd numbers between those numbers = "<<sumodd;
-    cout<<"\n sum of squares of odd numbers between those numbers = "<<sumSquareOdd;
-    cout<<"\n sum of squares of even numbers between those numbers = "<<sumSquareEven;
-    return 0;
+{	int a,b,c,d;
+ 	// user enters values of the variables 
+	cout<<"Enter the two values to be used.\n”;
+  	cin>>a>>b;
+	cout<<“\specify the action you want to perform with these two values \nEnter value 1 to find sum\nEnter value 2 to find minimum of the numbers \nEnter value 3 to find maximum of the two numbers\n";
+	cin>>d;
+	if(d==1)
+		sum(a,b);
+	else if (d==2)
+		{
+		  c=findmin(a,b);
+		 if(c==0)
+			cout<<"\n the entered numbers have equal value\n”;
+       		 else 
+			cout<<"\n The minimum value of the two is: "<<c<<endl;
+		}
+	else if (d==3)
+		{c=findmax(a,b);
+	
+		 if(c==0)
+			cout<<"\n the entered numbers are equal in value“;
+        	 else 
+			cout<<"\n The Maximum value of the two is "<<c;
+		}
+	else
+		{cout<<"\n Invalid entry:restarting program…”;
+		  main();
+		}
+			
+
+	return 0;
 }
