@@ -1,20 +1,22 @@
-//include the library files
+//including library
 #include<iostream>
 using namespace std;
-//declare and define summing function
-void sum(int x,int y,int &z)
-{//sum values
-    z=x+y;
+//declaring and defining the sum function.
+void sum(int x,int y,int &sum)
+{
+    //adding the values .
+    sum=x+y;
 }
-//start main
-int main(){
-    //declare variables and ask for its value to the user
+//defining main function.
+int main()
+{
+    //declare variables and ask the user to set the values using input output operations
     int a,b,c;
-    cout<<"\nEnter any two values ";
+    cout<<"\nEnter the two values  to be added.\n”;
     cin>>a>>b;
     //call summing function
     sum(a,b,c);
-    cout<<"Sum = "<<c<<endl;
+    cout<<"Sum ="<<c;
     return 0;
     
 }
