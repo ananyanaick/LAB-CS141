@@ -1,4 +1,4 @@
-//include the libraries
+/include the libraries
 #include <iostream>
 using namespace std;
 //declaring and defining function for finding maximum
