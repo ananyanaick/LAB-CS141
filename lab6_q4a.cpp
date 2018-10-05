@@ -1,28 +1,28 @@
-/include the libraries
+//including the library
 #include <iostream>
 using namespace std;
 //declaring and defining function for finding maximum
-int findmin(int a,int b)
-{    //check for min value and assign it to the return varible
-    int min;
-    if(a<b)
-        min=a;
-    else if(b<a)
-        min=b;
-    // return the value to main
-    return min;
+int min(int a,int b)
+{	//check for minimum value to assign it to the return variable
+ 	int m;
+ 	if(a<b)
+ 		m=a;
+ 	else if(b<a)
+ 		m=b;
+ 	// return the value to main
+ 	return m;
 }
 int main()
-{    int a,b,c;
-    // ask user for the values of the variables
-    cout<<"Enter any two values\n";
-    cin>>a>>b;
-    //call the function and assign its return value to a varible
-    c=findmin(a,b);
-    
-    if(c==0)
-        cout<<"\n Both the entered numbers are equal\n";
-    else
-        cout<<"\nMinimum is "<<c<<endl;
-    return 0;
+{	int a,b,c;
+ 	//the user enters values of the variables
+	cout<<“\nEnter the two values to be compared\n”;
+  	cin>>a>>b;
+        //call the function to assign its return value to another variable
+	c=min(a,b);
+	
+	if(c==0)
+		cout<<"\n the numbers entered are equal\n";
+        else 
+		cout<<"\nMinimum number of the two is : ”<<c<<endl;
+	return 0;
 }
