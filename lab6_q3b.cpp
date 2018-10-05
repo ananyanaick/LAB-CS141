@@ -1,9 +1,10 @@
-//include libaries
+//including library
 #include <iostream>
 using namespace std;
-//declaration of function
-void findmax(int a,int b,int &c)
-{//assign suitable value for c
+//declaring and defining of the function
+void max(int a,int b,int &c)
+{
+    //putting value for c appropriately
     if(a>b)
         c=a;
     else if(b>a)
@@ -12,15 +13,15 @@ void findmax(int a,int b,int &c)
 //main function
 int main()
 {    int a,b,c;
-    //ask the user for values for the varibles
-    cout<<"\nEnter any two values";
+    //user enter values for the variables to be compared
+    cout<<"\nEnter the two numbers that are to be compared\n”;
     cin>>a>>b;
-    //call function
-    findmax(a,b,c);
-    //check equality and then print the max
+    //calling the function
+    max(a,b,c);
+    //checking for equality and then printing the maximum of the two
     if(c==0)
-        cout<<"\nBoth are equal";
+        cout<<"\nBoth entered numbers are equal";
     else
-        cout<<"\nMaximum is "<<c<<endl;
+        cout<<"\nMaximum number of the two given is: "<<c;
     return 0;
 }
